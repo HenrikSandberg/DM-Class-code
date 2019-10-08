@@ -43,7 +43,7 @@ Vi kan gjøre mattematikk på tall.
 15 % 11  //4
 ```
 
-### Tekst 
+### Tekst
 ```js
 "hello world"
 'hello world'
@@ -139,7 +139,7 @@ if (a < b) {
 
 I dette tilfellet så har vi to alternativer først. Dersom if delen ikke er sant så sjekker vi else if delen. Hvis det er sant så kjører den koden. Hvis ikke det er sant så kjører else. Vit at du ikke trenger else delen dersom du ikke ønsker at noe skal skje dersom de to kjører og ingen ting skjer. Du kan også legge til flere `else if`  dersom du ønsker det. 
 
-## Boolkse operatorer 
+## Boolkse operatorer
 Det er en rekke oprasjoner vi kan gjøre på alle bookes utrykk. Disse kan brukes for å sammenlikne to verdier. 
 ```js
 // < minder enn
@@ -185,7 +185,7 @@ console.log(10);
 
 Dette er ekstremt konotete og ikke noe vi ønsker å skrive. Derfor har vi løkker! Vi ønsker å holde koden vår så enkel som mulig. Det gjør det lettere både å lese igjennom. 
 
-### While 
+### While
 ```js
 while(et_boolsk_utrykk) {
   //Kode som vil kjøre om og om igjen helt til 
@@ -209,7 +209,7 @@ while(count < 6) {
 //count is: 5
 ```
 
-#### Evige løkekr
+#### Evige løkker
 Vi kan generer evige løkker noe som er kjipt fordi det vil krasje nettleseren din
 ```js
 var count = 0;
@@ -245,4 +245,3 @@ for(var i = 0; i < str.length; i++){
   console.log(str[i]);
 }
 ```
-
