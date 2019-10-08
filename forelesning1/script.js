@@ -14,6 +14,12 @@ navn = "Meea";
 var tall = 123;
 
 // + - * / %
+// % -> ser etter hvor mange ganger et tall går opp i et annet
+// hvis du skriver 10%2 vil du få 0. Det vil si, 2 går opp i 10
+// 5 ganger. 2+2+2+2+2 = 10
+//Dersom du skriver 10%3 vil du få svaret 1. En er da retsen
+// siden 3 bare går opp i 10 3 ganger. 3+3+3+1 = 10
+
 tall = 1;
 tall = tall + tall;
 tall * 1000;
