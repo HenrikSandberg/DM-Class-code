@@ -236,7 +236,6 @@ for(var count = 0; count < 6; count++) {
 }
 ```
 
-
 Vi kan også skrive ut hver enkel bokstav av en tekststreng på følgende måte
 ```js
 var str = "hello";
