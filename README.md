@@ -244,3 +244,146 @@ for(var i = 0; i < str.length; i++){
   console.log(str[i]);
 }
 ```
+
+## Array 
+Array er en måte å kunne samle data inn i en liste. Det er tungvindt å gjøre oppreasjoner på masse ting som ligger løst hver for seg. Derfor kan vi organsere dataene våres inn i en liste. 
+```js
+//Lagret som variabler
+var venn1 = "Kari";
+var venn2 = "Truls";
+var venn3 = "Daniel";
+var venn4 = "Marthe";
+
+//Lagret i et array
+var venner = ["Kari", "Truls", "Daniel", "Marthe"];
+```
+
+Arrayer lar deg grupere data sammen i en liste. Du kan fint hente ut enkelte elemeneter. 
+
+### Indeks i array
+Dette er noe som ofte er ganske forvirrende med hvordan array fungerer. Hvis tar `venner` arrayet som utgangspunkt så kan vi enkelt hente ut gjenstander og vi kan sjekke lengeden til arrayet. __MERK:__ lengde og indeks til gjenstand er to forskjellige tall. Arrayet over har 4 gjenstander i arrayet, men indexene teller fra null. Det vil da si at indeksene til arrayet går fra 0 til 3. Dette føles kanskje rart, men husk at en datamaskin teller fra 0.
+
+### Bruke løkker til å gå igjennom array
+Løkker brukes ofte når det kommer til å gå igjennom et array. De er perfekte for å enkelt gå igjennom vær gjenstand i et array. 
+
+Eks med venner definert i forrige kodeblok. 
+```js
+venner.length //Dette vil skrive tallet 4
+
+for (var teller = 0; teller < venner.length; teller++){
+	console.log(venner[teller]);
+}
+
+```
+Denne løkken går igjennom arrayet og printer ut hevrt navn som står i arrayet. Legg merke til at teller starter på null, så det er det samme som arrayet sin indeks, samtidig så fortsetter den bare så lenge teller er mindre enn `venner.length`. 
+
+#### Hva ville skjedd dersom vi satte teller til å fortsette til den var lik  `venner.length`? 
+Dette er en klassisk feil å gjøre. Koden din vil da også kjøre en runde til da `teller = 4`. Da vil vi prøve å hente ut gjenstanden som er på indeks 4 i arrayet, og der finner vi ingen ting. Arrayet har som sagt 4 gjenstander, men deres indekser er bare fra 0 til 3. 
+
+### Legge til nye ting i et array
+Du kan fint legge til så mange gjenstander du vil (og av hvilken som helst type) inn i et array. Dette kan gjøres på et par forskjellige måter:
+```js
+//Legge til i et array
+
+//Legge til med funksjon
+venner.append("Thomas");
+venner.length //Er nå 5
+
+//Legge til eller endre verdi med indeks
+venner[5] = "Hanne";
+venner[1] = "Nina";
+
+//Venner vil nå inneholde:
+//["Kari", "Nina", "Daniel", "Marthe", "Thomas", "Hanne"]
+//	0		 1		  2			3		  4			5
+
+```
+
+
+### Et par siste ting om array
+```js
+//Vi kan starte med et tomt array med å skrive følgende:
+var familie = [];
+var familie = new Array() //Utypisk måte å gjøre det på 
+
+//Array kan innholde alle typer data
+//Men ikke balnd sånn som jeg har gjort her da det vil føre til ekstremt mye hode bry for deg selv og andre senere. 
+var random_collection = [49, true, "Hermione", null];
+
+//Du kan finne array sin lengde med å skrive .length
+var nums = [45,37,89,24];
+nums.length   //4
+```
+
+### Tekst er et Array
+Husker du at vi bruket `.length`på tekst? Det er fordi en tekst er egentlig et array av karakterer 🤯
+
+Alt du kan gjøre med et array kan du også gjøre med tekst. 
+```js
+//Single or Double quotes OK
+"Hei på deg"
+'hello world'
+
+//Concatenation
+"Harald" + "Rex"  //"HaraldRex"
+
+//Kan bruke .length på tekst
+"Hei på deg".length  //10
+
+//Få tilgang til enkelte tegn i en tekst streng med å skrive [] og indeksen på bokstaven du ønsker
+"hei"[0]  //"h"
+"hei"[2]  //"i"
+"hei"[4]  //undefined
+```
+
+## Funksjoner
+Funksjoner lar deg samle data og/eller funksjonalitet slik at man enkelt kan gjøre den samme opprasjonen flere ganger. En funksjoner gjør at du kan gjenta noe du gjør ofte i koden din slik at du ikke må repitere hav du skriver flere ganger. 
+
+Det er veldig smart å skrive funksjoner sånn at hvis du først må gjøre en endring som skal skje flerer steder i koden din så er du 100% sikker på at den er endret alle stedene samtidig. 
+
+Du definerer funksjoner ved å skrive på den følgende formen:
+```js
+function navnetDuØnskerPåFUnksjonen () {
+	//Her inne bestemmer du hva funksjonen skal gjøre.
+}
+```
+
+### Argumenter
+For at funksjoner virkelig skal bli brukbare så må de ta inn noe informasjon. Den beste måten å tenke på en funksjoner er at alt som foregår inne i den foregår inne i et svart avlukke vekke fra resten av koden din. Hvis du da ønsker å sende den data så kan du gjøre det gjennom argumenter. Argumenter er verdier du definerer når du definerer funksjonen din, men de får ikke noen verdier før du kaller på funksjonen. 
+
+```js
+//Funksjon med arguemnt
+
+function funksjonNavn(argument1){
+	console.log(arguemnt1);
+}
+
+// Funksjon med flere argumenter 
+function leggeSammen(argument1, argument2){
+	console.log(arguemnt1 + argument2);
+}
+
+```
+
+### Return
+Ofte så ønsker vi at noe skal skje inne i denne svarte boksen, men at vi vil ha noe tilabke fra den. Da kommer nøkkel ordet `return` inn. Når man skriver return så stopper funksjonen din å kjøre og koden er tilbake til der den kalte på funksjonen. 
+
+```js
+//Denne funksjonen tar inn tekst og sørger for at den får stor forbokstav
+
+function storForbokstav(tekst) {
+  return tekst.charAt(0).toUpperCase() + tekst.slice(1);
+}
+
+var by = "paris";              				   //"paris"
+var byMedStorBokstav = storForbokstav(city);  //"Paris"
+
+//vi kan fange hva enn vi får tilabke fra en funksjon med en variabel
+```
+
+
+
+
+
+
+
