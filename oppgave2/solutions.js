@@ -14,16 +14,15 @@ for (var i = 0; i < array.length; i++){
 array.push(6);
 for (var i = 0; i < array.length; i++){
     console.log(array[i]);
+}
 
 //Oppgave 3
 //Svar: X = 3;
 //Svar: Y = John;
 
-
 //Oppgave 4
 //test(10, 40); SVAR: 30
 //test(5, 10); SVAR: -5
-
 
 //Oppgave 5
 //test(40); SVAR: 80
