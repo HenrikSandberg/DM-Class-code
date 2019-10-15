@@ -45,3 +45,45 @@ function test(x) {
 }
   
 test(40); //SVAR: 
+
+//Oppgave 5
+/*
+Lag en funksjon som tar inn to tall og returer det største tallet
+eks:
+function returnerStørst(tall1, tall2) {
+    //Din kode
+}
+
+addPartall(2, 2) //Return 2
+addPartall(3, 2) //Return 3
+addPartall(2, 6) //Return 6
+*/
+
+//Oppgave 6
+/*
+Lag en funksjon som tar inn to tall, dersom BEGGE 
+tallene er par tall så skal de ganges sammen.
+
+Hvis ikke så skal funksjonen returere tallene plusset sammen
+
+eks:
+function addPartall(tall1, tall2) {
+    //Din kode
+}
+addPartall(2, 6) //Return 12
+addPartall(2, 3) //Return 5
+*/
+
+//Oppgave 7
+/* Lag en funskjon som var inn et argument som er et tall.
+Så går du igjennom med en løkke å legger til "*"  for det antallet tall 
+som komm inn med argumentet. På slutten returerer du strengen med stjerner
+
+eks:
+function stjerner(numberOfStars){
+    //Dette er oppgaven
+}
+
+var minStjerneStreng = stjerner(5);
+console.log(minStjerneStreng) //Skal skrive "*****""
+*/
