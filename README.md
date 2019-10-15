@@ -286,7 +286,7 @@ Du kan fint legge til så mange gjenstander du vil (og av hvilken som helst type
 //Legge til i et array
 
 //Legge til med funksjon
-venner.append("Thomas");
+venner.push("Thomas");
 venner.length //Er nå 5
 
 //Legge til eller endre verdi med indeks
