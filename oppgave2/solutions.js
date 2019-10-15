@@ -1,5 +1,4 @@
 
-//LØSNINGSFORSLAG
 //Oppgave 6
 function returnerStørst(tall1, tall2) {
     if (tall1 >= tall2) {
@@ -25,4 +24,13 @@ function stjerner(numberOfStars) {
         str = str + "*";
     }
     return str;
+}
+
+//Oppgave 9
+function printStars(tall) {
+    var stars = "";
+    for (var i = 0; i <= tall; i++) {
+        stars = stars + "*";
+        console.log(stars);
+    }
 }

@@ -86,3 +86,23 @@ function stjerner(numberOfStars){
 var minStjerneStreng = stjerner(5);
 console.log(minStjerneStreng) //Skal skrive "*****""
 */
+
+//Oppgave 9 
+/*
+Lag en funskjon som skriver ut linjer med stjerner "*" slik at det ser ut som en pyramide på skjermen. 
+La argumentet du tar inn bestemme hvor mange stjernerader som skal srkives ut. 
+
+Kompiler og kjør, gjør endringer inntil du ser at programmet fungerer slik det skal.
+
+eks:
+function printStars(tall) {
+    //Din kode
+}
+printStars(3)
+
+Skal skrive ut:
+*
+**
+***
+
+*/
