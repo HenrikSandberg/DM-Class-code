@@ -28,7 +28,7 @@ var x = person.length;  //SVAR:
 var y = person[0]; //SVAR: 
 
 
-//Oppgave 3
+//Oppgave 4
 function test(x,y) {
     return y - x;
 }
@@ -37,16 +37,15 @@ test(10, 40); //SVAR:
 test(5, 10); //SVAR:
 
 
-//Oppgave 4
+//Oppgave 5
 function test(x) {
     return x*2;
     console.log(x);
     return x/2; 
 }
-  
 test(40); //SVAR: 
 
-//Oppgave 5
+//Oppgave 6
 /*
 Lag en funksjon som tar inn to tall og returer det største tallet
 eks:
@@ -59,7 +58,7 @@ addPartall(3, 2) //Return 3
 addPartall(2, 6) //Return 6
 */
 
-//Oppgave 6
+//Oppgave 7
 /*
 Lag en funksjon som tar inn to tall, dersom BEGGE 
 tallene er par tall så skal de ganges sammen.
@@ -74,7 +73,7 @@ addPartall(2, 6) //Return 12
 addPartall(2, 3) //Return 5
 */
 
-//Oppgave 7
+//Oppgave 8
 /* Lag en funskjon som var inn et argument som er et tall.
 Så går du igjennom med en løkke å legger til "*"  for det antallet tall 
 som komm inn med argumentet. På slutten returerer du strengen med stjerner
