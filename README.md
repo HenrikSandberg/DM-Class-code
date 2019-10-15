@@ -225,7 +225,7 @@ Dette er en litt mer samlet utgave av en while løkke. Her er alt samlet i toppe
 
 ```js
 for(teller; boolskUttrykk; telleOpp) {
-  //Kode vi øsnker å kjøre
+  //Kode vi ønsker å utføre
 }
 ```
 
@@ -236,7 +236,7 @@ for(var count = 0; count < 6; count++) {
 }
 ```
 
-Vi kan også skrive ut hver enkel bokstav av en tekststreng på følgende måte
+Vi kan også skrive ut hvert enkel bokstav av en tekststreng på følgende måte
 ```js
 var str = "hello";
 
@@ -245,7 +245,7 @@ for(var i = 0; i < str.length; i++){
 }
 ```
 
-## Array 
+## Array
 Array er en måte å kunne samle data inn i en liste. Det er tungvindt å gjøre oppreasjoner på masse ting som ligger løst hver for seg. Derfor kan vi organsere dataene våres inn i en liste. 
 ```js
 //Lagret som variabler
@@ -277,7 +277,7 @@ for (var teller = 0; teller < venner.length; teller++){
 ```
 Denne løkken går igjennom arrayet og printer ut hevrt navn som står i arrayet. Legg merke til at teller starter på null, så det er det samme som arrayet sin indeks, samtidig så fortsetter den bare så lenge teller er mindre enn `venner.length`. 
 
-#### Hva ville skjedd dersom vi satte teller til å fortsette til den var lik  `venner.length`? 
+#### Hva ville skjedd dersom vi satte teller til å fortsette til den var lik  `venner.length`?
 Dette er en klassisk feil å gjøre. Koden din vil da også kjøre en runde til da `teller = 4`. Da vil vi prøve å hente ut gjenstanden som er på indeks 4 i arrayet, og der finner vi ingen ting. Arrayet har som sagt 4 gjenstander, men deres indekser er bare fra 0 til 3. 
 
 ### Legge til nye ting i et array
@@ -380,7 +380,6 @@ var byMedStorBokstav = storForbokstav(city);  //"Paris"
 
 //vi kan fange hva enn vi får tilabke fra en funksjon med en variabel
 ```
-
 
 
 

@@ -36,12 +36,12 @@ test(10, 40); //SVAR:
 test(5, 10); //SVAR:
 
 //Oppgave 5
-function test(x) {
+function andreTest(x) {
     return x*2;
     console.log(x);
     return x/2; 
 }
-test(40); //SVAR: 
+andreTest(40); //SVAR: 
 
 //Oppgave 6
 /*
