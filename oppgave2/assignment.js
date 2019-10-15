@@ -27,7 +27,6 @@ person[2] = 46;
 var x = person.length;  //SVAR: 
 var y = person[0]; //SVAR: 
 
-
 //Oppgave 4
 function test(x,y) {
     return y - x;
@@ -35,7 +34,6 @@ function test(x,y) {
   
 test(10, 40); //SVAR:
 test(5, 10); //SVAR:
-
 
 //Oppgave 5
 function test(x) {
@@ -53,9 +51,9 @@ function returnerStørst(tall1, tall2) {
     //Din kode
 }
 
-addPartall(2, 2) //Return 2
-addPartall(3, 2) //Return 3
-addPartall(2, 6) //Return 6
+returnerStørst(2, 2) //Return 2
+returnerStørst(3, 2) //Return 3
+returnerStørst(2, 6) //Return 6
 */
 
 //Oppgave 7
