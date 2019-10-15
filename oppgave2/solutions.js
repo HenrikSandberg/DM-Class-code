@@ -4,6 +4,8 @@
 function returnerStørst(tall1, tall2) {
     if (tall1 >= tall2) {
         return tall1;
+    } else {
+        return tall2;
     }
 }
 
