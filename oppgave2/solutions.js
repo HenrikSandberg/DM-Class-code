@@ -1,13 +1,13 @@
 
 //LØSNINGSFORSLAG
-//Oppgave 5
+//Oppgave 6
 function returnerStørst(tall1, tall2) {
     if (tall1 >= tall2) {
         return tall1;
     }
 }
 
-//Oppgave 6
+//Oppgave 7
 function addPartall(tall1, tall2) {
     if (tall1 % 2 === 0 && tall2 % 2 === 0) {
         return tall1 * tall2;
@@ -16,7 +16,7 @@ function addPartall(tall1, tall2) {
     }
 }
 
-//Oppgave 7
+//Oppgave 8
 function stjerner(numberOfStars) {
     var str = "";
     for (var i = 0; i <= numberOfStars; i++ ){
