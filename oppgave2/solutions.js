@@ -25,7 +25,7 @@ for (var i = 0; i < array.length; i++){
 //test(5, 10); SVAR: -5
 
 //Oppgave 5
-//andreTest(40); SVAR: 80
+//test(40); SVAR: 80
 
 //Oppgave 6
 function returnerStørst(tall1, tall2) {
