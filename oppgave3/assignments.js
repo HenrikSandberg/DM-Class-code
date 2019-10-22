@@ -26,6 +26,8 @@ Du skal lage en tips kalkulator. Lag et tekstfelt hvor bruker kan taste inn hvor
 Lag et tekstfelt til hvor de kan taste inn hvor mye de ønsker å gi i tips
 Til slutt skal du gjøre en utregning som blir vist for brukeren.
 
-Du kan bruke funskjonen under for å gjøre kalkulasjonen 
+Når du får inn verdier fra input så er de tekst. 
+Du kan gjøre dette om til tall med å skrive:
+var dinVariabel = Number(inputSittNavn.value)
 
 */
