@@ -1,11 +1,5 @@
-let conteiner = document.querySelector("#conteiner");
-let messageDisplay = document.querySelector("#message");
-let colorDisplay = document.querySelector("#colorDisplay");
-let squres = document.querySelectorAll(".squeres");
-let h1 = document.querySelector("h1");
-let newGame = document.getElementById("newGame");
-let modeBtn = document.getElementsByClassName("mode");
-let gameTag = document.querySelector("#gameTag");
+//Få tak i følgene elementer fra HTML-en
+//#conteiner, #message, #colorDisplay, .squeres, h1, newGame, mode, og #gameTag
 
 let colors = [];
 let rightAnwser = "";
@@ -36,23 +30,25 @@ function generatRandumColors(number) {
 //Setter fager per firkan på skjerm 
 function settSquers() {
     for (i = 0; i < squres.length; i++) {
-        squres[i].style.backgroundColor = colors[i] === undefined ? "#232323" : colors[i];
+        if (colors[i] === undefined) {
+            //sett hver firkant til å ha samme farge som bakgrunnen
+        } else {
+            // sett firkanten til å være lik colors[i];
+        }
     }
 }
 
 //Sett svar. Velg en av de tilfeldig generete fargene og sett dem til å være svartet 
 function settAnswer() {
-    return colors[setRandumNumber(colors.length)];
+    //returner en tilfeldig farge og sett den inn i arrayet 
 }
 
 
-//Setter en lytter til hver av divene
+//Sett event listenere på hver av firkantene.
+//Hvis fargen i firkanten er lik rightAnwser, så kjører dere funskjoen correct()
+//Hvis ikke så sender dere this til worng() funksjonen
 for (i = 0; i < colors.length; i++) {
-    squres[i].addEventListener("click", function () {
-        if (!foundAwnser) {
-            this.style.backgroundColor === rightAnwser ? correct() : worng(this);
-        }
-    });
+    //Din kode her
 }
 
 
@@ -77,9 +73,9 @@ function worng(item) {
 }
 
 //Legger til lyttere for for nytt spill knappen
-newGame.addEventListener("click", function () {
-    setUpNewGame(isHard ? 6 : 3);
-});
+//Hvis knappen blir trykket på så setter dere opp et nytt spill med setUpNewGame()
+//Den funksjoen trenger et tall, send inn 6 dersom bruker har valgt isHard
+//Send 3 dersom den er false
 
 //For loop igjennom begge mode knappene i spillet. 
 //Bytter klasser på dem for å bytte modus på spille.
@@ -94,7 +90,11 @@ for (i = 0; i < modeBtn.length; i++) {
 
             this.classList.add("selected");
 
-            setUpNewGame(this === modeBtn[0] ? 3 : 6);
+            if (this === modeBtn[0]) {
+                setUpNewGame(6);
+            } else {
+                setUpNewGame(3);
+            }
         }
     });
 
@@ -102,7 +102,11 @@ for (i = 0; i < modeBtn.length; i++) {
 
 //Gjør alle oppsett nødvendig for å resette spillet
 function setUpNewGame(num) {
-    isHard = num === 6 ? true : false;
+    if (num === 6) {
+        isHard = true;
+    } else {
+        isHard = false;
+    }
 
     h1.style.backgroundColor = "steelblue";
     newGame.textContent = "New Colors";
