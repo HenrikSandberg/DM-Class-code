@@ -382,7 +382,23 @@ var byMedStorBokstav = storForbokstav(city);  //"Paris"
 ```
 
 
+## Document Object Manipulation (DOM)
+Dette er svært praktisk for mye, spesielt:
+- Spill
+- Animasjoner
+- Dropdown menyer
+- Form Validation
 
+Dette er overgangen mellom HTML/CSS og JavaScriptet ditt. Nettleseren din gjør alle elementene dine om til JavaScript elementer. 
 
+```js
+var button = document.querySelector('button');
+var list = document.getElementById('min-liste');
 
+button.addEventListener('click', function() {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("Ny gjenstand"));
+    list.appendChild(li);
+});
+```
 
