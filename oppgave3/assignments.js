@@ -11,4 +11,21 @@
 //Når du trykker på den andre knappen så skal du redusere tallet
 //HINT: Lag en egen variabel som holder på antallet trykk
 //BONUS: Ikke la telleren bli mindre enn null
+//BONUS: Hvis count faller ned til null, oppdater HTML til body med en bakgrunnsfarge
 
+//Oppgave 3
+//Lag en HTML fil med tre elementer, et input felt, en knapp og en liste
+//Lag en JavaScript
+//Få tak i alle HTML objektene 
+//Når bruker trykker på knappen skal teksten i input feltet legges til i lista
+
+
+//Oppgave 4
+/* 
+Du skal lage en tips kalkulator. Lag et tekstfelt hvor bruker kan taste inn hvor mye de skal betale
+Lag et tekstfelt til hvor de kan taste inn hvor mye de ønsker å gi i tips
+Til slutt skal du gjøre en utregning som blir vist for brukeren.
+
+Du kan bruke funskjonen under for å gjøre kalkulasjonen 
+
+*/
