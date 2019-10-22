@@ -1,10 +1,10 @@
 //Få tak i følgene elementer fra HTML-en
 //#conteiner, #message, #colorDisplay, .squeres, h1, newGame, mode, og #gameTag
 
-let colors = [];
-let rightAnwser = "";
-let foundAwnser = false;
-let isHard = true;
+var colors = [];
+var rightAnwser = "";
+var foundAwnser = false;
+var isHard = true;
 
 
 //Med en gang siden åpnes.
@@ -12,14 +12,14 @@ setUpNewGame(6);
 
 //Velger et tilfeldig tall
 function setRandumNumber(num) {
-    let rand = Math.floor(Math.random() * num);
+    var rand = Math.floor(Math.random() * num);
     return rand;
 }
 
 //Genererer en tilfeldig farge og putt dem in i et array. 
 //Arrayet skal returneres.
 function generatRandumColors(number) {
-    let c = [];
+    var c = [];
 
     for (i = 0; i < number; i++) {
         c.push("rgb(" + setRandumNumber(256) + ", " + setRandumNumber(256) + ", " + setRandumNumber(256) + ")");
