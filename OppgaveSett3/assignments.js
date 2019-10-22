@@ -31,3 +31,8 @@ Du kan gjøre dette om til tall med å skrive:
 var dinVariabel = Number(inputSittNavn.value)
 
 */
+
+/* Oppgave 5
+    Åpne mappen med opopgave 5. Der finner dere en HTML, CSS og JavaScript fil.
+    JavaScript filen mangler flere ting, og det er nå din oppdage som utvikler å rette dette. 
+*/
