@@ -389,4 +389,174 @@ Dette er svært praktisk for mye, spesielt:
 - Dropdown menyer
 - Form Validation
 
-Dette er overgangen mellom HTML/CSS og JavaScriptet ditt. Nettleseren din gjør alle elementene dine om til JavaScript elementer. 
+Dette er overgangen mellom HTML/CSS og JavaScriptet ditt. Nettleseren din gjør alle elementene dine om til JavaScript elementer. På denne måten kan du endre så mye du vil både oppdatere innhold og styling. 
+
+### Hente ut objekter fra HTML
+Du kan hente ut HTML elementer ved å kalle på `document`. Dette referer til HTML dokumentet. Pass alltid på å koble JavaScriptet deres i bunnen av en HTML fil. Da sørger dere for at alle HTML elementer eksisterer før JavaScriptet fungerer. 
+
+```js
+var minVaribal = document.getElementById("element")
+```
+
+Over har vi satt en variabel i JavaScriptet vårt. Den kan kalles på når som helst i JavaScript koden vår. PASS PÅ: det som står inne i getElementByID må tilsvare en ID som eksisterer i HTML-en din. 
+
+#### Måter å hente ut fra HTML
+```js
+document.getElementById() //Henter ut noe med en ID
+document.getElementsByClassName() //Lager en liste med alle elementene som har en klasse i HTML-en din
+document.querySelector() //Henter ut det første elemente det finner
+//Hvis du ønsker å hente ut en klasse så skriv . foran navnet
+//Øsnker du å hente ut noe med en ID så må du skrive # foran navnet
+
+document.querySelectorAll() //Henter ut alle elementene av enten type eller navn. Den fungerer som querySelector, men den henter ut ALLE den finner. 
+```
+
+
+### innerHTML
+Returnerer en tekst av hva enn som står mellom to \<tag\>\</tag\>. Så hvis dette er et tall så vil det automatisk allikevel bli gjort om til tekst. Men, dersom den inneholder indere HTML tagger så får man tilbake HTML i form av en tekst.
+
+#### I HTML fil:
+```html
+<p>
+  Dette er en <strong>kul</strong> paragraf 
+</p>
+```
+
+
+#### I JavaScript:
+```js
+//Select the <p> tag:
+var tag = document.querySelector("p");
+
+tag.innerHTML
+//"Dette er en <strong>kul</strong> paragraf"
+```
+
+Du kan alltid endre alle indre elementer ved å skrive:
+```js
+tag.innerHTML = "Noe nytt"
+//Noe nytt
+```
+
+
+### textContent
+Fungerer litt som innerHTML, men den fjerner alle indre \<tag\>\</tag\> elementer. 
+
+#### I HTML fil:
+```html
+<p>
+  Dette er en <strong>kul</strong> paragraf 
+</p>
+```
+
+
+#### I JavaScript:
+```js
+//Select the <p> tag:
+var tag = document.querySelector("p");
+
+tag.innerHTML
+//"Dette er en kul paragraf"
+```
+
+
+### ClassList
+Dette er en liste med alle klassene som er på et element, du kan oppdatere og endre dette så mye du bare vil med følgende kode. 
+```js
+var tag = document.querySelector("h1");
+
+//Legger til en klasse på h1 elementet
+tag.classList.add("klasse-navn");
+
+//Fjerner klassen
+tag.classList.remove("klasse-navn");
+```
+
+### Style changes
+Alle HTML elementer kan bli stil satt. Dette gjorde dere i faget kreativt web, der lærte dere å endre på hvordan ting ser ut ved hjelp at CSS. Dette er fremdeles hvordan vi gjør ting, men dere kan også endre elementer ved hjelp at JavaScript. Ved å hente ut et element så kan dere skrive .style. På den måten kan dere manipulere alle ting dere kan gjøre i CSS. Dette kan gjøres på følgende måte:
+```js
+var h1 = document.querySelector("h1");
+
+h1.style.color = "pink";
+```
+
+Her henter jeg ut en h1 tag fra HTML-en også endrer jeg fargen dens til å bli rosa. 
+
+```js
+/SELECT
+var tag = document.getElementById("highlight");
+
+//MANIPULATE
+tag.style.color = "blue";
+tag.style.border = "10px solid red";
+tag.style.fontSize = "70px";
+tag.style.background = "yellow";
+tag.style.marginTop = "200px";
+```
+
+##### Endre attributter til HTML
+Dette er mer komplisert, men du kan fint endre attributter slik som bilder og lenker dersom det er ønskelig. 
+
+__HTML__
+```js
+<a href="www.google.com">Trykk på meg</a>
+<img src="logo.png">
+```
+
+__JavaScript__
+```js
+var link = document.querySelector("a");
+link.getAttribute("href");  //"www.google.com"
+
+//Bytter ut lenka
+link.setAttribute("href","www.dogs.com"); 
+///<a href="www.dogs.com">Trykk på meg</a>
+
+//Bytt ut bilde
+var img = document.querySelector("img");
+img.setAttribute("src", "corgi.png");
+//<img src="corgi.png">
+```
+
+
+### Event Listener
+Vi kan lytte etter eventer slik at funksjonene vår først skyter, dersom brukeren gjør noe på siden så aktiverer de koden vår. Det er mye mer brukervennlig enn å bare fyre av masse funksjoner i hytt og gevær. Det er en lang liste med eventer vi kan lytte etter. Vi kan da legge en event på HTML elemente vår ved å skrive:
+
+#### Attributter I event listneren
+Som våre egene funksjoner så trenger add eventlister to attributter. 
+1. Den første er en tekststreng for hvilken event du ønsker at koden din skal lytte etter. 
+2. Er funksjonen som skal kjøre dersom eventen forekommer. Pass på å ikke ha () etter funskjonskallet ditt. 
+
+```js
+
+function minFunskjoner() {
+	//DEN GJØR ET ELLER ANNET
+}
+
+element.addEventListener('click', minFunskjoner); 
+
+
+```
+
+Som dere ser så har jeg lagt til navnet til funksjonen som eksisterer utenfor inne i `eventListener()`kallet. 
+
+#### Typiske Eventer å lytte etter
+Over gjør vi den mest typiske eventen å lytte etter. Den kjører da `minFunksjoner` hver gang noen trykker på hva enn som har fått denne event listneren. Dere kan lese alle type eventer her [https://www.w3schools.com/jsref/dom_obj_event.asp ](), men vit at de vanligste er de følgene:
+- ‘click’ -\> Når et element blir trykket på
+- 'change’ -\> Når verdien dens endrer seg
+- ‘mouseover’ -\> Når musa er over elementet (samme som :hover i CSS)
+
+Det er vanlig å sette klikk eventer på knapper, men dere kan fint sette det på alle elementer. 
+
+
+
+
+
+
+
+
+
+
+
+
+
