@@ -103,6 +103,7 @@ for (i = 0; i < modeBtn.length; i++) {
 //Gjør alle oppsett nødvendig for å resette spillet
 function setUpNewGame(num) {
     isHard = num === 6 ? true : false;
+    
 
     h1.style.backgroundColor = "steelblue";
     newGame.textContent = "New Colors";
