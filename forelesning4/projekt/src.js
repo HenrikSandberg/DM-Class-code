@@ -16,11 +16,12 @@ function createList() {
 }
 
 artcileButton.addEventListener('click', function () {
-    root.html( `<h1> Hello World</h1> 
+    root.html( 
+        `<h1> Hello World</h1> 
         <p>Some text</p>
         <img src='../kanin.jpg'/> 
-        ${createList()}
-    `)
+        ${createList()}`
+    )
 });
 
 contentBtn.click(function() {
